@@ -33,6 +33,10 @@ a {
     text-transform: uppercase;
 }
 
+section#hero {
+    margin-top: 50px !important;
+}
+
 .main-button {
     padding: 11px 18px;
     background: transparent;
