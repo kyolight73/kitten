@@ -230,6 +230,23 @@ span.see-work {
     position: relative;
 }
 
+form label {
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+}
+
+form input {
+    font-style: normal;
+    font-weight: 700;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    margin-left: 10px;
+    color: #fff;
+}
+
 @media (max-width: 500px) {
     .map-box:hover img:last-child {
         display: none;
@@ -349,6 +366,22 @@ span.see-work {
 }
 
 @media (min-width: 320px) {
+    #contact .figital-animation {
+        justify-content: start !important;
+    }
+    #contact .contact-info {
+        margin-bottom: 35px;
+    }
+    form label {
+        font-size: 30px;
+    }
+    
+    form input {
+        font-size: 28px;
+        font-style: normal;
+        padding: 10px;
+        margin-left: 0;
+    }
     .gif-hidden img {
         width: 100%;
     }
@@ -408,6 +441,17 @@ span.see-work {
 }
 
 @media (min-width: 768px) {
+    #contact .contact-info {
+        margin-bottom: 50px;
+    }
+    form label {
+        font-size: 32px;
+    }
+    
+    form input {
+        font-size: 30px;
+        margin-left: 10px;
+    }
     .gif-hidden img {
         width: 351px;
     }
@@ -455,6 +499,22 @@ span.see-work {
 }
 
 @media (min-width: 1200px) {
+    #contact .figital-animation {
+        justify-content: center  !important;
+    }
+    #contact .contact-info {
+        margin-bottom: 113px;
+    }
+    #contact .icon-2 {
+        margin-top: 150px;
+    }
+    form label {
+        font-size: 38px;
+    }
+    
+    form input {
+        font-size: 24px;
+    }
     .inspiration.position-relative {
         position: absolute !important;
         bottom: 86px;
@@ -546,6 +606,16 @@ span.see-work {
 }
 
 @media (min-width: 1400px) {
+    #contact .figital-animation {
+        margin-left: 100px;
+    }
+    form label {
+        font-size: 48px;
+    }
+    
+    form input {
+        font-size: 36px;
+    }
     .inspiration.position-relative {
         bottom: 230px;
     }
@@ -604,6 +674,13 @@ span.see-work {
 
     .logo img {
         width: 230px;
+    }
+}
+
+@media (min-width: 1900px)
+{
+    #contact .figital-animation {
+        margin-left: 335px;
     }
 }
 
@@ -703,6 +780,10 @@ span.see-work {
 
 .tape2 img {
     transform: translate(0, 0) rotate(13deg);
+}
+
+form input:focus {
+    outline: 0;
 }
 
 .tape {
