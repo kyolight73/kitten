@@ -37,6 +37,15 @@ section#hero {
     margin-top: 50px !important;
 }
 
+svg.mouse-up {
+    position: fixed;
+    right: 55px;
+    bottom: 20%;
+    z-index: 99;
+    cursor: pointer;
+    display: none;
+}
+
 .main-button {
     padding: 11px 18px;
     background: transparent;
@@ -217,6 +226,33 @@ step path {
     transform: translateX(-50%);
 }
 
+.b-text p,
+.b-text ul li,
+.b-text span {
+    font-size: 18px;
+}
+
+.sub-page .semi-large-title span {
+    font-size: 23px;
+}
+
+.row.gx-5.with-hr {
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.row.gx-5.with-hr:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 62px);
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .map-img {
     position: absolute;
     left: 0;
@@ -247,7 +283,15 @@ form input {
     color: #fff;
 }
 
+.sub-page .row.gx-5 .semi-large-title span {
+    font-size: 20px;
+}
+
 @media (max-width: 500px) {
+    .sub-page .logo img {
+        width: 180px;
+    }
+
     .map-box:hover img:last-child {
         display: none;
     }
@@ -366,6 +410,28 @@ form input {
 }
 
 @media (min-width: 320px) {
+
+    .star-title svg,
+    .star-title img {
+        width: 80px;
+    }
+
+    .sub-page .semi-large-title {
+        font-size: 20px;
+    }
+
+    section#term {
+        margin-top: 70px;
+    }
+
+    h1.strong-font {
+        font-size: 35px;
+    }
+
+    #contact button.main-button {
+        margin-top: 20px;
+    }
+
     #contact .figital-animation {
         justify-content: start !important;
     }
@@ -445,6 +511,19 @@ form input {
 }
 
 @media (min-width: 768px) {
+    section#term {
+        margin-top: 120px;
+    }
+
+    h1.strong-font {
+        font-size: 50px;
+    }
+
+    #contact .icon-2 img {
+        width: 130px;
+        margin-bottom: 50px;
+    }
+
     #contact .contact-info {
         margin-bottom: 50px;
     }
@@ -505,6 +584,29 @@ form input {
 }
 
 @media (min-width: 1200px) {
+
+    .star-title svg,
+    .star-title img {
+        width: initial;
+    }
+
+    .sub-page .semi-large-title {
+        font-size: 20px;
+    }
+
+    #contact button.main-button {
+        margin-left: 60px;
+    }
+
+    #contact .icon-2 img {
+        width: initial;
+        margin-bottom: 0;
+    }
+
+    #partnership {
+        width: 350px;
+    }
+
     #nf h2.semi-large-title {
         position: absolute;
     }
@@ -620,7 +722,18 @@ form input {
     }
 }
 
+h1.strong-font {
+    text-align: center;
+    margin: 110px 0;
+    padding-top: 110px;
+}
+
 @media (min-width: 1400px) {
+
+    #partnership {
+        width: 380px;
+    }
+
     .inspiration.position-relative {
         bottom: 50px;
     }
@@ -635,11 +748,11 @@ form input {
     }
 
     form label {
-        font-size: 48px;
+        font-size: 30px;
     }
 
     form input {
-        font-size: 36px;
+        font-size: 26px;
     }
 
     .map-footer.d-flex {
@@ -661,7 +774,7 @@ form input {
     }
 
     .strong-font {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .content__container__list li {
@@ -691,9 +804,38 @@ form input {
         width: 100px;
     }
 
+    #partnership {
+        width: 400px;
+    }
+
+}
+
+.star-title {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 @media (min-width: 1900px) {
+    .sub-page .semi-large-title {
+        font-size: 23px;
+    }
+
+    #partnership {
+        width: 525px;
+    }
+
+    .strong-font {
+        font-size: 50px;
+    }
+
+    form label {
+        font-size: 48px;
+    }
+
+    form input {
+        font-size: 36px;
+    }
 
     .story .story-item img,
     .story .story-item video {
@@ -761,7 +903,7 @@ form input {
 }
 
 #map .main-button:hover {
-    width: 185px !important;
+    width: 195px !important;
 }
 
 .main-button.join-us:hover {
@@ -771,6 +913,17 @@ form input {
 .gif-hidden {
     position: absolute;
     z-index: 9;
+}
+
+div.position-relative span.coma {
+    bottom: -7px;
+}
+
+span.coma {
+    position: absolute;
+    right: 0;
+    bottom: -19px;
+    font-size: 61px;
 }
 
 .gif-hidden img {
@@ -1169,6 +1322,12 @@ form input:focus {
     /* transform: translateX(40px); */
 }
 
+.story-item.item img,
+.story-item.item video {
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+
 .figital-animation svg:not(:nth-child(1)) {
     margin-left: 5px;
 }
@@ -1417,6 +1576,11 @@ footer {
     padding: 10px 5px;
 }
 
+.logo {
+    cursor: pointer;
+    z-index: 9;
+}
+
 /* .story.owl-carousel .owl-item.active:not(:first-child) {
     margin-right: 35px !important;
 }
@@ -1447,11 +1611,6 @@ footer {
     bottom: -90px;
     z-index: 9;
     left: 0;
-}
-
-.story-item.item {
-    border: 1px solid #fff;
-    border-radius: 15px;
 }
 
 

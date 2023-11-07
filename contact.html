@@ -22,7 +22,7 @@
   <body>
     <style>
       .main-button:hover {
-        width: 169px !important;
+        width: 159px !important;
       }
 
       .d-fex.social-icon {
@@ -66,7 +66,7 @@
           </div>
         </div>
         <div class="col-md-9">
-          <form action="123">
+          <form action="">
             <span>
               <label for="full_name">I am</label>
               <input
@@ -76,7 +76,7 @@
                 id="full_name"
               />
             </span>
-            <span>
+            <span class="position-relative">
               <label for="company-project">from</label>
               <input
                 type="text"
@@ -84,8 +84,12 @@
                 name="company-project"
                 id="company-project"
               />
+              <span class="coma">,</span>
             </span>
-            <div style="margin: 15px 0 45px 0">
+            <div
+              class="position-relative"
+              style="margin: 15px 0 45px 0; width: fit-content"
+            >
               <label for="partnership">interested in</label>
               <input
                 type="text"
@@ -93,8 +97,13 @@
                 name="partnership"
                 id="partnership"
               />
+              <span class="coma">.</span>
             </div>
-            <div class="contact-info">
+            <div
+              class="position-relative"
+              class="contact-info"
+              style="width: fit-content"
+            >
               <label for="contact-info">Reach me at</label>
               <input
                 type="text"
@@ -102,15 +111,16 @@
                 name="contact-info"
                 id="contact-info"
               />
+              <span class="coma">.</span>
             </div>
-            <div>
+            <div style="margin-top: 100px">
               <span style="font-weight: bold">
                 By submitting this form, you consent to our Privacy Policy
               </span>
               <button
                 type="submit"
                 class="main-button"
-                style="width: 136px; text-align: left; margin-left: 60px"
+                style="width: 136px; text-align: left"
               >
                 SEND INFO
                 <svg
@@ -311,11 +321,47 @@
           </div>
         </div>
       </footer>
+
+      <div class="loading-screen" style="display: none">
+        <div class="kitten-thank">
+          <img
+            src="assets/videos/Thanks.gif"
+            width="300"
+            height="280"
+            alt="kitten-thank"
+          />
+        </div>
+
+        <p
+          style="
+            color: #010101;
+            font-family: Syncopate;
+            font-size: 23px;
+            font-weight: 700;
+            text-transform: uppercase;
+          "
+        >
+          Thank you for interested in working with us, our team will reach out
+          to you soon!
+        </p>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/libraries/bootstrap/js/bootstrap.min.js"></script>
     <script>
-      $(document).ready(function () {});
+      $(document).ready(function () {
+        $("#contact button.main-button").on("click", function (e) {
+          e.preventDefault();
+          $(".loading-screen").show();
+          setTimeout(function () {
+            window.location.href = "./index.html";
+          }, 3000);
+        });
+
+        $(".logo").on("click", function () {
+          window.location.href = "./index.html";
+        });
+      });
     </script>
   </body>
 </html>

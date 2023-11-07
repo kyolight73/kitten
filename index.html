@@ -649,7 +649,8 @@
             <div class="figital-card-content">
               <img src="assets/images/figital2.png" alt="figital2" />
               <div>
-                Figitals are positioned in the market at a higher price range.
+                Elevate the level of immersion through the incorporation of
+                content, such as backstory videos and music.
               </div>
             </div>
           </div>
@@ -657,7 +658,7 @@
             <div class="figital-card-content">
               <img src="assets/images/figital3.png" alt="figital3" />
               <div>
-                Figitals are positioned in the market at a higher price range.
+                Encourage revisits and boost users' retention with figitals.
               </div>
             </div>
           </div>
@@ -665,7 +666,7 @@
             <div class="figital-card-content">
               <img src="assets/images/figital4.png" alt="figital4" />
               <div>
-                Figitals are positioned in the market at a higher price range.
+                Authenticate legitimacy with Near-field Communication (NFC).
               </div>
             </div>
           </div>
@@ -722,7 +723,7 @@
                 <a
                   href="./contact.html"
                   class="main-button"
-                  style="width: 185px"
+                  style="width: 185px; padding: 11px 23px"
                   >EXPLORE NOW
                   <svg
                     class="d-none"
@@ -832,7 +833,7 @@
             <video width="100%" height="100%" autoplay muted loop>
               <source src="assets/videos/slidevid1.mp4" type="video/mp4" />
             </video>
-            <img src="assets/images/slide4.avif" alt="slide4" />
+            <img src="assets/images/slide4.jpg" alt="slide4" />
           </div>
           <div class="story-item item">
             <img src="assets/images/slide5.webp" alt="slide5" />
@@ -968,9 +969,9 @@
           </div>
           <div class="col-lg-6">
             <div class="d-flex footer-link">
-              <a href="#">TERMS OF USE</a>
-              <a href="#">PRIVACY POLICY</a>
-              <a href="#">IP RIGHTS</a>
+              <a href="./terms_of_use.html">TERMS OF USE</a>
+              <a href="./privacy_policy.html">PRIVACY POLICY</a>
+              <a href="./ip_rights.html">IP RIGHTS</a>
             </div>
           </div>
         </div>
@@ -997,6 +998,13 @@
     <script src="assets/libraries/owl/owl.carousel.min.js"></script>
     <script>
       $(document).ready(function () {
+        // set the item in localStorage
+        haveLoaded = localStorage.getItem("haveLoaded");
+        if (typeof haveLoaded !== "undefined" && haveLoaded == 1) {
+          $(".loading-screen").css("opacity", 0);
+        }
+        localStorage.setItem("haveLoaded", 1);
+
         setTimeout(function () {
           $(".loading-screen").css("opacity", 0);
           $(".loading-screen").css("z-index", -1);
@@ -1007,13 +1015,13 @@
         setTimeout(function () {
           $(".content__container__list").css(
             "-webkit-animation",
-            "change 20s infinite"
+            "change 20s step-end infinite"
           );
           $(".content__container__list").css(
             "animation",
-            "change 20s infinite"
+            "change 20s step-end infinite"
           );
-        }, 900);
+        }, 0);
 
         var images = [
           "assets/images/shoe.png",
@@ -1029,7 +1037,7 @@
         var currentImage = 0;
         var currentImage2 = 0;
 
-        var change_time = 3350; // Thời gian ban đầu
+        var change_time = 3350;
 
         function changeImage() {
           $("img.floating").attr("src", images[currentImage]);
@@ -1067,12 +1075,15 @@
             if (windowWidth >= 768 && windowWidth <= 1199) {
               // Điều kiện cho tablet (min-width: 768px)
               scrollRatio =
-                (scrollPosition - (start - 800)) / (end + 300 - (start + 900));
+                (scrollPosition - (start - 800)) / (end + 300 - (start + 1000));
             } else if (windowWidth >= 320 && windowWidth <= 767) {
               // Điều kiện cho mobile (min-width: 320px)
               scrollRatio =
                 (scrollPosition - (start - 800)) / (end + 300 - (start + 1300));
-            } else if (windowWidth >= 1200) {
+            } else if (windowWidth >= 1200 && windowWidth <= 1649) {
+              scrollRatio =
+                (scrollPosition - (start - 800)) / (end + 300 - (start + 900));
+            } else if (windowWidth >= 1650) {
               scrollRatio =
                 (scrollPosition - (start - 800)) / (end + 300 - (start + 600));
             }
@@ -1080,6 +1091,34 @@
           }
 
           figital.css("--scroll", scrollRatio);
+        });
+
+        let mybutton = $(".mouse-up");
+
+        // Sử dụng jQuery để bắt sự kiện cuộn trang
+        $(window).on("scroll", function () {
+          scrollFunction();
+        });
+
+        function scrollFunction() {
+          if ($(document).scrollTop() > 20) {
+            mybutton.css("display", "block");
+          } else {
+            mybutton.css("display", "none");
+          }
+        }
+
+        // Sử dụng jQuery để bắt sự kiện khi nút được nhấn
+        mybutton.on("click", function () {
+          topFunction();
+        });
+
+        function topFunction() {
+          $("html, body").scrollTop(0);
+        }
+
+        $(".logo").on("click", function () {
+          window.location.href = "./index.html";
         });
 
         $(".story").owlCarousel({
@@ -1091,7 +1130,7 @@
           responsive: {
             0: {
               items: 1,
-              nav: true,
+              nav: false,
             },
             767.5: {
               items: 2,
@@ -1099,12 +1138,79 @@
             },
             1000: {
               items: 4,
-              nav: true,
+              nav: false,
               loop: false,
             },
           },
         });
       });
     </script>
+    <svg
+      width="74"
+      height="72"
+      class="mouse-up"
+      viewBox="0 0 74 72"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_d_1956_1524)">
+        <rect
+          x="5"
+          y="65"
+          width="60"
+          height="61.3333"
+          rx="30"
+          transform="rotate(-90 5 65)"
+          fill="white"
+        />
+        <path
+          d="M35.6713 25L25 45C31.1254 39.2644 40.2079 39.2644 46.3333 45L35.6621 25L35.6713 25Z"
+          fill="#E53988"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d_1956_1524"
+          x="0"
+          y="0"
+          width="73.3333"
+          height="72"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feMorphology
+            radius="2"
+            operator="dilate"
+            in="SourceAlpha"
+            result="effect1_dropShadow_1956_1524"
+          />
+          <feOffset dx="1" dy="1" />
+          <feGaussianBlur stdDeviation="2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_1956_1524"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1956_1524"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
   </body>
 </html>
