@@ -287,7 +287,164 @@ form input {
     font-size: 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
+    #ideas .col-lg-4.col-6.position-relative.wow.fadeInLeftBig {
+        align-self: center;
+    }
+
+    #figital .row.gx-5:first-child:after,
+    #mission .row.gx-5:first-child:after {
+        display: none;
+    }
+
+    .main-text {
+        font-weight: 100;
+    }
+
+    span.see-work {
+        font-size: 16px;
+    }
+
+    #figital .semi-large-title {
+        margin-bottom: 25px;
+        font-weight: 100;
+        font-size: 18px;
+    }
+
+    .step-child span {
+        font-size: 18px;
+    }
+
+    .step .step-child {
+        margin-bottom: 15px;
+    }
+
+    .step:hover .step-content {
+        margin-bottom: 20px;
+    }
+
+    svg.figure-icon1 {
+        width: 100px;
+        left: 112%;
+    }
+
+    svg.figure-icon2 {
+        width: 50px !important;
+        left: 45px !important;
+    }
+
+    .position-absolute.tape2 {
+        bottom: -376px !important;
+    }
+
+    .main-button {
+        font-size: 12px;
+        width: 155px;
+        padding: 9px 15px;
+    }
+
+    #nf .main-button svg:last-child {
+        display: block !important;
+        opacity: 1 !important;
+        width: 230px !important;
+        top: 56px !important;
+        right: -150% !important;
+    }
+
+    .main-button {
+        font-size: 12px;
+        width: 155px;
+        padding: 9px 15px;
+    }
+
+    section#hero {
+        margin-top: 105px !important;
+        margin-bottom: 325px;
+    }
+
+    .icon.position-absolute {
+        top: -58px;
+    }
+
+    .content__container {
+        margin-top: -20px;
+        height: 55px;
+    }
+
+    .nf-text:before {
+        display: none;
+    }
+
+    .star-big svg {
+        width: 60px;
+    }
+
+    .star-big {
+        left: 15px !important;
+    }
+
+    .nf-text {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    img.nf-mobile {
+        width: 50%;
+    }
+
+    .star-decor svg {
+        width: 26px;
+        margin-top: 0px !important;
+    }
+
+    .star-decor {
+        right: 15% !important;
+        bottom: 50px !important;
+    }
+
+    .position-absolute.tape2 img {
+        height: 54px;
+        bottom: 118px !important;
+    }
+
+    .tape img {
+        height: 84px !important;
+    }
+
+    .position-absolute.logo-partner img {
+        height: 63px;
+    }
+
+    .position-absolute.logo-partner {
+        bottom: -155px !important;
+    }
+
+    .floating {
+        width: 205px !important;
+    }
+
+    .nf-box.position-relative {
+        position: relative !important;
+    }
+
+    .hovering {
+        bottom: -35px !important;
+        right: -195px;
+    }
+
+    .content__container {
+        margin-top: -20px;
+    }
+
+    section#hero {
+        margin-top: 105px !important;
+        margin-bottom: 325px;
+    }
+
+    .icon.position-absolute {
+        top: -58px;
+    }
+
     .sub-page .logo img {
         width: 180px;
     }
@@ -392,15 +549,17 @@ form input {
     }
 
     .icon-2 img {
-        width: 80px;
+        width: 115px;
     }
 
     .icon-2 {
-        bottom: -29px !important;
+        bottom: -250px !important;
+        right: 100px !important;
     }
 
     .icon-1 {
-        bottom: -60px !important;
+        bottom: -68px !important;
+        left: 36px !important;
     }
 
     .main-button svg:last-child {
@@ -410,6 +569,13 @@ form input {
 }
 
 @media (min-width: 320px) {
+    .desk-top {
+        display: none;
+    }
+
+    .tape2 img {
+        transform: translate(0, 0) rotate(30deg);
+    }
 
     .star-title svg,
     .star-title img {
@@ -497,20 +663,36 @@ form input {
     }
 
     .logo {
-        top: -8px;
+        top: -60px;
         left: 0px;
     }
 
     .logo img {
-        width: 55px;
+        width: 125px;
     }
 
     .icon img {
-        width: 20px;
+        width: 40px;
     }
 }
 
 @media (min-width: 768px) {
+    #nf .main-button.mobile {
+        margin-top: 35px;
+    }
+
+    .desk-top {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .tape2 img {
+        transform: translate(0, 0) rotate(13deg);
+    }
+
     section#term {
         margin-top: 120px;
     }
@@ -967,10 +1149,6 @@ span.coma {
     animation: moveLeft 10s linear infinite;
     position: absolute;
     bottom: 89px;
-}
-
-.tape2 img {
-    transform: translate(0, 0) rotate(13deg);
 }
 
 form input:focus {
