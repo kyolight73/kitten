@@ -99,9 +99,9 @@
                   </li>
                   <li
                     class="content__container__list__item strong-font position-relative"
-                    data-text="Branch"
+                    data-text="Brand"
                   >
-                    Branch
+                    Brand
                   </li>
                   <li
                     class="content__container__list__item strong-font position-relative"
@@ -874,7 +874,7 @@
           </div>
           <div class="col-lg-8 position-relative wow fadeInRightBig">
             <h2 class="semi-large-title">
-              We are a
+              Create
               <span style="color: #e53988">extraordinary products</span><br />at
               the crossroads of<br />
               <span style="color: #1ed6ff">physical and digital.</span>
@@ -1057,7 +1057,6 @@
           </div>
         </div>
         <div class="row" style="margin-top: 60px">
-          F
           <div class="col-lg-6">
             <div
               style="
@@ -1184,10 +1183,12 @@
               // Điều kiện cho mobile (min-width: 320px)
               scrollRatio =
                 (scrollPosition - (start - 800)) / (end + 300 - (start + 1300));
-            } else if (windowWidth >= 1200 && windowWidth <= 1649) {
-              scrollRatio =
-                (scrollPosition - (start - 800)) / (end + 300 - (start + 900));
-            } else if (windowWidth >= 1650) {
+            }
+            // else if (windowWidth >= 1200 && windowWidth <= 1649) {
+            //   scrollRatio =
+            //     (scrollPosition - (start - 800)) / (end + 300 - (start + 900));
+            // }
+            else if (windowWidth >= 1200) {
               scrollRatio =
                 (scrollPosition - (start - 800)) / (end + 300 - (start + 600));
             }
