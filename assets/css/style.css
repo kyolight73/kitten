@@ -39,8 +39,8 @@ section#hero {
 
 svg.mouse-up {
     position: fixed;
-    right: 55px;
-    bottom: 20%;
+    right: 20px;
+    bottom: 10%;
     z-index: 99;
     cursor: pointer;
     display: none;
@@ -233,7 +233,7 @@ step path {
 }
 
 .sub-page .semi-large-title span {
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .row.gx-5.with-hr {
@@ -283,11 +283,105 @@ form input {
     color: #fff;
 }
 
-.sub-page .row.gx-5 .semi-large-title span {
+.sub-page .content .row.gx-5 .semi-large-title span {
     font-size: 20px;
 }
 
 @media (max-width: 767px) {
+    .map-box.cn {
+        right: 33% !important;
+    }
+
+    .map-box.vn {
+        right: 43% !important;
+    }
+
+    .map-img:before {
+        height: 150px !important;
+    }
+
+    .map-box.sn {
+        right: 43% !important;
+    }
+
+    .map-vector {
+        display: none !important;
+    }
+
+    img.flip-button {
+        position: absolute;
+        bottom: -17px;
+        width: 36px !important;
+        right: 37%;
+        transform: translateX(-50%);
+    }
+
+    .owl-stage-outer {
+        padding: 18px 0;
+    }
+
+    .flip {
+        transform-style: preserve-3d;
+        transition: all 1s;
+        position: relative;
+    }
+
+    .flip:hover {
+        transform: rotateY(180deg);
+    }
+
+    .face {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+    }
+
+    .face.back {
+        display: block;
+        transform: rotateY(180deg);
+        box-sizing: border-box;
+        color: #fff;
+        text-align: center;
+    }
+
+    .desk-top {
+        display: none;
+    }
+
+    .desk-top.important {
+        display: none !important;
+    }
+
+    span.why-us {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    svg.blue-star {
+        width: 19px;
+        margin-right: 15px;
+    }
+
+    section#ideas {
+        margin-bottom: 300px;
+    }
+
+    a.main-button.join-us {
+        position: absolute;
+        bottom: -70px;
+        width: 130px !important;
+    }
+
+    .inspiration-svg {
+        top: 0px;
+    }
+
+    .figure-block img {
+        max-width: calc(100% + 150px) !important;
+        transform: translateX(-67px);
+    }
+
     #ideas .col-lg-4.col-6.position-relative.wow.fadeInLeftBig {
         align-self: center;
     }
@@ -325,12 +419,14 @@ form input {
 
     svg.figure-icon1 {
         width: 100px;
-        left: 112%;
+        left: 122%;
+        top: -40px;
     }
 
     svg.figure-icon2 {
         width: 50px !important;
         left: 45px !important;
+        bottom: 0px;
     }
 
     .position-absolute.tape2 {
@@ -449,8 +545,14 @@ form input {
         width: 180px;
     }
 
-    .map-box:hover img:last-child {
-        display: none;
+    .map-box.cn:hover img:last-child {
+
+        top: -180%;
+        left: -300%;
+    }
+
+    .map-box img:last-child {
+        width: 212px;
     }
 
     .nf-box.position-relative {
@@ -537,7 +639,12 @@ form input {
     }
 
     #figital .semi-large-title {
-        margin-bottom: 25px;
+        margin-bottom: 25px !important;
+        margin-top: 0 !IMPORTANT;
+    }
+
+    #figital .row.gx-5.position-relative {
+        flex-direction: column-reverse;
     }
 
     .map-vector img {
@@ -569,10 +676,6 @@ form input {
 }
 
 @media (min-width: 320px) {
-    .desk-top {
-        display: none;
-    }
-
     .tape2 img {
         transform: translate(0, 0) rotate(30deg);
     }
@@ -621,10 +724,6 @@ form input {
         width: 100%;
     }
 
-    .map-box img:last-child {
-        display: none;
-    }
-
     .figital-card-content {
         margin-bottom: 25px;
     }
@@ -643,11 +742,11 @@ form input {
     }
 
     .map-box img:first-child {
-        width: 45px;
+        width: 54px;
     }
 
     section#ideas {
-        margin-top: 400px;
+        margin-top: 230px;
     }
 
     .free-quote-block {
@@ -655,7 +754,7 @@ form input {
     }
 
     .strong-font {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .content__container__list li {
@@ -677,6 +776,7 @@ form input {
 }
 
 @media (min-width: 768px) {
+
     #nf .main-button.mobile {
         margin-top: 35px;
     }
@@ -686,7 +786,7 @@ form input {
     }
 
     .mobile {
-        display: none;
+        display: none !important;
     }
 
     .tape2 img {
@@ -766,6 +866,18 @@ form input {
 }
 
 @media (min-width: 1200px) {
+    section#figital {
+        margin-top: 230px;
+    }
+
+    .position-absolute.tape2 img {
+        bottom: -45px;
+    }
+
+    .footer-text {
+        font-size: 16px;
+    }
+
     .figital-card-content div {
         font-size: 13px;
     }
@@ -826,12 +938,12 @@ form input {
 
     .inspiration.position-relative {
         position: absolute !important;
-        bottom: 86px;
+        bottom: -9px;
     }
 
     svg.inspiration-svg.show-on-desktop {
         top: initial !important;
-        bottom: -94px;
+        bottom: -175px;
         padding: 30px;
     }
 
@@ -874,7 +986,7 @@ form input {
     }
 
     h2.semi-large-title {
-        font-size: 33px;
+        font-size: 38px;
     }
 
     .strong-font {
@@ -918,6 +1030,13 @@ h1.strong-font {
 }
 
 @media (min-width: 1400px) {
+    .sub-page .semi-large-title span {
+        font-size: 23px;
+    }
+
+    .sub-page .semi-large-title {
+        font-size: 23px;
+    }
 
     #partnership {
         width: 380px;
@@ -948,15 +1067,6 @@ h1.strong-font {
         bottom: 10%;
     }
 
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: calc(100% - 305px) !important;
-    }
-
     #ideas h2.semi-large-title {
         font-size: 30px;
         line-height: 50px;
@@ -977,6 +1087,20 @@ h1.strong-font {
 }
 
 @media (min-width: 1650px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: calc(100% - 305px) !important;
+    }
+
+    .footer-text {
+        font-size: 18px;
+    }
+
     .icon img {
         width: 100px;
     }
@@ -994,6 +1118,14 @@ h1.strong-font {
 }
 
 @media (min-width: 1900px) {
+    .sub-page h2.semi-large-title {
+        font-size: 23px !important;
+    }
+
+    .position-absolute.tape2 img {
+        bottom: 89px;
+    }
+
     .strong-font {
         font-size: 40px;
     }
@@ -1151,8 +1283,15 @@ span.coma {
     overflow-x: hidden;
 }
 
+.footer-text {
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
 .position-absolute.logo-partner img {
-    animation: moveLeft2 30s linear infinite;
+    animation: moveLeft2 20s linear infinite;
 }
 
 
@@ -1166,9 +1305,8 @@ span.coma {
 }
 
 .position-absolute.tape2 img {
-    animation: moveLeft 10s linear infinite;
+    animation: moveLeft 20s linear infinite;
     position: absolute;
-    bottom: 89px;
 }
 
 form input:focus {
@@ -1316,7 +1454,7 @@ form input:focus {
     }
 
     to {
-        transform: translate(calc(-50px * 30), -350px) rotate(13deg);
+        transform: translate(calc(-50px * 30), -347px) rotate(13deg);
     }
 }
 
@@ -1326,7 +1464,7 @@ form input:focus {
     }
 
     to {
-        transform: translateX(calc(-50px * 60));
+        transform: translateX(calc(-5600px / 2));
     }
 }
 
@@ -1667,6 +1805,19 @@ footer {
 .map-box:hover img:last-child {
     opacity: 1;
 }
+
+.figital-animation.v2 svg:nth-child(2) {
+    transform: translateX(0px);
+}
+
+.figital-animation.v2 svg:nth-child(3) {
+    transform: translateX(10px);
+}
+
+.figital-animation.v2 svg:nth-child(4) {
+    transform: translateX(20px);
+}
+
 
 .kitten-run img {
     animation: kitten-animation 1s ease;
