@@ -444,7 +444,7 @@ form input {
         opacity: 1 !important;
         width: 230px !important;
         top: 56px !important;
-        right: -150% !important;
+        right: -130% !important;
     }
 
     .main-button {
@@ -545,14 +545,23 @@ form input {
         width: 180px;
     }
 
-    .map-box.cn:hover img:last-child {
-
+    .map-box.cn img:last-child {
         top: -180%;
-        left: -300%;
+        left: -319%;
+    }
+
+    .map-box.vn img:last-child {
+        transform: translate(-26%, -113%);
     }
 
     .map-box img:last-child {
         width: 212px;
+        height: 52px;
+        object-fit: contain;
+    }
+
+    .map-box.sn img:last-child {
+        transform: translate(-41%, -106%);
     }
 
     .nf-box.position-relative {
@@ -576,13 +585,40 @@ form input {
     }
 
     .map-footer.d-flex {
-        display: block !important;
         bottom: 70px;
+        left: 45px;
+        width: 100%;
+    }
+
+    .map-footer.d-flex div:first-child {
+        font-size: 10px;
+    }
+
+    section#map {
+        margin-bottom: 0 !important;
+    }
+
+    section#mission {
+        margin-top: 0;
+    }
+
+    #mission h2.semi-large-title:first-child {
+        font-weight: 100;
+        font-size: 18px;
+    }
+
+    #mission h2.semi-large-title {
+        font-size: 20px;
+        margin: 0 !important;
+    }
+
+    .map-footer.d-flex .main-button {
+        width: 141px !important;
+        margin-left: 15px;
     }
 
     .map-footer div:last-child {
         margin-left: 0 !important;
-        margin-top: 15px;
     }
 
     #map .col-lg-8.position-relative {
