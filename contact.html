@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -17,6 +16,12 @@
       href="https://fonts.googleapis.com/css?family=Lato"
       rel="stylesheet"
     />
+    <title>Contact Us</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon-dark.png"
+    />
   </head>
 
   <body>
@@ -28,6 +33,12 @@
       .d-fex.social-icon {
         text-align: start;
       }
+      @media (min-width: 1400px) {
+        body {
+          max-height: 100vh;
+          overflow-y: hidden;
+        }
+      }
     </style>
     <div class="container" id="contact">
       <div
@@ -37,7 +48,7 @@
         <div class="logo" style="position: relative">
           <img src="assets/images/logo.png" alt="logo" />
         </div>
-        <div class="star-big" style="position: relative; top: 0">
+        <div class="star-big desk-top" style="position: relative; top: 0">
           <svg
             width="149"
             height="149"
@@ -60,34 +71,42 @@
       </div>
       <div class="row" style="color: #fff">
         <div class="col-md-3">
-          <h2 class="strong-font">Let's team up</h2>
-          <div class="icon-2" style="position: relative; bottom: 0">
+          <div class="icon-2z mobile" style="position: relative">
+            <img src="assets/images/icon2.png" alt="icon-2" />
+          </div>
+          <h2 class="strong-font">
+            Let's<br />
+            team up
+          </h2>
+          <div class="icon-2 desk-top" style="position: relative; bottom: 0">
             <img src="assets/images/icon2.png" alt="icon-2" />
           </div>
         </div>
         <div class="col-md-9">
-          <form action="">
-            <span>
+          <form action="contact.php" method="POST">
+            <span class="input">
               <label for="full_name">I am</label>
               <input
                 type="text"
                 placeholder="Your Full Name"
                 name="full_name"
                 id="full_name"
+                required
               />
             </span>
-            <span class="position-relative">
+            <span class="position-relative input">
               <label for="company-project">from</label>
               <input
                 type="text"
                 placeholder="Company/Project"
                 name="company-project"
                 id="company-project"
+                required
               />
               <span class="coma">,</span>
             </span>
             <div
-              class="position-relative"
+              class="position-relative input interested-in"
               style="margin: 15px 0 45px 0; width: fit-content"
             >
               <label for="partnership">interested in</label>
@@ -96,11 +115,12 @@
                 placeholder="Partnership, Launching..."
                 name="partnership"
                 id="partnership"
+                required
               />
               <span class="coma">.</span>
             </div>
             <div
-              class="position-relative"
+              class="position-relative input interested-in"
               class="contact-info"
               style="width: fit-content"
             >
@@ -110,6 +130,7 @@
                 placeholder="Your contact info"
                 name="contact-info"
                 id="contact-info"
+                required
               />
               <span class="coma">.</span>
             </div>
@@ -350,8 +371,8 @@
     <script src="assets/libraries/bootstrap/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#contact button.main-button").on("click", function (e) {
-          e.preventDefault();
+        $("form").on("submit", function (e) {
+          //   e.preventDefault();
           $(".loading-screen").show();
           setTimeout(function () {
             window.location.href = "./index.html";
